@@ -1,24 +1,18 @@
-<map 
-  id="mapId"
-  class="map"
-  scale="{{mapDefault.scale}}"
-  min-scale="{{mapDefault.min_scale}}"
-  max-scale="{{mapDefault.max_scale}}"
-  latitude="{{latitude}}"
-  longitude="{{longitude}}"
-  bindmarkertap="onMarkerTap"
-  bindcallouttap="onCalloutTap"
-  bindlabeltap="onLabelTap"
-></map>
-<!-- 遮罩 -->
-<!-- <view id="fotBox">
-  <view class="fog-pop">
-      <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
-      <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
-      <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
-  </view>
-</view> -->
-<!-- 访问信息设置 -->
-<view class="pop">
-    <view class="pop-content"></view>
+<view id="weappy-index">
+	<view class="main-content" wx:if="{{pageShow}}">
+		<map id="mapId" class="map" style="width:{{mapDefault.width}}px;height:{{mapDefault.height}}px;" scale="{{mapDefault.scale}}" min-scale="{{mapDefault.min_scale}}"
+			max-scale="{{mapDefault.max_scale}}" latitude="{{latitude}}" longitude="{{longitude}}"
+			bindmarkertap="onMarkerTap" bindcallouttap="onCalloutTap" bindlabeltap="onLabelTap"
+			enable-3D="{{mapDefault.enable3D}}"></map>
+		<!-- 遮罩 -->
+		<!-- <view id="fotBox">
+      <view class="fog-pop">
+          <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
+          <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
+          <view class="item"><image class="img" src="../../static/images/fog-2.png" mode="heightFix"/></view>
+      </view>
+    </view> -->
+		<!-- 访问信息设置 -->
+	</view>
+	<setting wx:if="{{settingShow}}" type="{{type}}" bindsettingCloseEvent="settingCloseEvent"/>
 </view>

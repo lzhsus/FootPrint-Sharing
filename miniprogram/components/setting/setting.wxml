@@ -1,0 +1,12 @@
+
+<view class="setting-pop">
+    <view class="setting-con">
+        <view class="close" bindtap="closeTap"></view>
+        <view class="logo-row">
+            <image class="logo" src="https://7465-text-cf9c1e-1258956257.tcb.qcloud.la/static/method-draw-image_1_.png" mode="widthFix" lazy-load/>
+        </view>
+        <view class="button-row">
+            <button class="button" bindtap="openSettingTap">打开设置页进行设置</button>
+        </view>
+    </view>
+</view>
